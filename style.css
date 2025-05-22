@@ -1,0 +1,482 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto;
+    margin-left: 50px;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h2{
+    text-align: center;
+    color: #333333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="datetime-local"],
+.form-group textarea,
+.form-group select,
+.form-group button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.form-group input[type="datetime-local"] {
+    appearance: auto; /* allow browser's default calendar popup */
+    -webkit-appearance: textfield;
+}
+
+.form-group button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.form-group button:hover {
+    background-color: #0056b3;
+}
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+
+
+.reminder-form input, .reminder-form textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.reminder-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.reminder-list li {
+    margin: 15px 0;
+}
+
+.search-bar {
+    background-color: transparent;
+    box-shadow: none;
+    align-items: center;
+    gap: 10px;
+    margin-left: 500px;
+    justify-content: center;
+    border: none;
+}
+.search-bar form {
+    display: flex;
+    margin: 0;
+}
+
+.search-bar input[type="text"],
+.search-bar select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    background: transparent;
+    box-shadow: none;
+    
+}
+
+.search-bar button {
+    padding: 8px 10px;
+    font-size: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn button,
+.delete-btn button {
+    padding: 6px 12px;
+    margin: 4px 6px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn button {
+    background-color: #28a745; /* green */
+    color: white;
+}
+
+.edit-btn button:hover {
+    background-color: #218838;
+}
+
+.delete-btn button {
+    background-color: #dc3545; /* red */
+    color: white;
+}
+
+.delete-btn button:hover {
+    background-color: #c82333;
+}
+.button-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 8px;
+}
+form.delete-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+.page-heading {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #1f2f3f;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.heading-icon {
+    width: 40px;
+    height: 40px;
+}
+.login-container {
+    width: 350px;
+    margin: 100px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #333;
+}
+
+.login-container input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-container p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.my-button {
+    display: block;
+    margin: 0 auto;
+    background-color: #007bff;       /* Blue background */
+    color: white;                    /* White text */
+    border: none;                    /* Remove border */
+    padding: 10px 18px;              /* Size of button */
+    font-size: 15px;                 /* Text size */
+    border-radius: 5px;              /* Rounded corners */
+    cursor: pointer;                 /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;  /* Smooth hover effect */
+}
+
+.my-button:hover {
+    background-color: #0056b3;       /* Darker blue on hover */
+}
+.my-button:active {
+    transform: scale(0.97);          /* Slight shrink on click */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    background-color: #e9f5ff;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 40px;
+    padding-top: 7rem;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #3d3c3c;
+}
+
+.btn-primary {
+    background: #007aff;
+    color: white;
+    padding: 18px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #005fcc;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-card {
+    background: white;
+    padding: 20px;
+    margin-top: 3.5rem;
+    margin-right: 0rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.image-card img {
+    width: 490px;
+    height: auto;
+    border-radius: 20px;
+
+}
+.logo {
+    font-family: 'Arial', sans-serif; /* clean font */
+    font-weight: bold;
+    font-size: 36px; /* adjust size as needed */
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  } 
+.logo .logo-icon {
+    width: 50px; /* adjust size */
+    height: 50px;
+    object-fit: contain;
+}
+#calendar {
+    max-width: 650px;
+    margin: 50px auto;
+    margin-right: 20px;
+    width: 100%;
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .auth-buttons .btn {
+    margin-left: 1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .home-btn {
+    border: 1px solid #007bff;
+    color: #007bff;
+  }
+
+  .home-btn:hover {
+    background-color: #e6f0ff;
+  }
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 2rem;
+  }
+  
+  .feature {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .feature h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #0e0e0e
+  }
+  
+  .feature p {
+    font-size: 1.5rem;
+    color: #2f2e2e;
+  }
+
+/* General Styles for the Panels */
+#todays-reminders, #selected-date-reminders {
+    background-color: #f9f9f9;  /* Light background for the panels */
+    border-radius: 8px;  /* Rounded corners for the panels */
+    padding: 20px;  /* Padding for inner spacing */
+    margin-top: 20px;  /* Space above the panels */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Slight shadow to lift the panel */
+    width: 100%;  /* Panels take 45% of the screen width */
+    margin-bottom: 20px;  /* Space below the panels */
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panels {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title Styling */
+#todays-reminders h2, #selected-date-reminders h2 {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;  /* Space between title and list */
+}
+
+/* Reminder List Styling */
+#todays-reminder-list, #selected-date-reminder-list {
+    list-style-type: none;  /* Remove default list bullets */
+    padding-left: 0;
+}
+
+/* Reminder List Item Styling */
+#todays-reminder-list li, #selected-date-reminder-list li {
+    font-size: 1em;
+    color: #555;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;  /* Thin line between items */
+    margin-bottom: 10px;  /* Space between items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remove bottom border for the last item */
+#todays-reminder-list li:last-child, #selected-date-reminder-list li:last-child {
+    border-bottom: none;
+}
+
+
+/* Reminder Button Styling (if you add buttons in each reminder) */
+button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #007bff;  /* Blue background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+    #todays-reminders, #selected-date-reminders {
+        padding: 15px;  /* Less padding on smaller screens */
+    }
+
+    #todays-reminder-list li, #selected-date-reminder-list li {
+        font-size: 0.9em;  /* Smaller text on mobile */
+    }
+
+    #todays-reminders h2, #selected-date-reminders h2 {
+        font-size: 1.3em;  /* Smaller titles on mobile */
+    }
+}
+  

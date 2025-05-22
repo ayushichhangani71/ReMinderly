@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Reminder</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Edit Reminder</h1>
+
+    <form method="POST">
+        <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" name="title" value="{{ reminder.title }}" required>
+        </div>
+        <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" name="description" value="{{ reminder.description }}" required>
+        </div>
+        <div class="form-group">
+        <label for="datetime">Date-Time:</label>
+        <input type="datetime-local" name="datetime" value="{{ reminder.date_time|replace(' ', 'T') }}" required>
+        </div>
+        <div class="form-group">
+        <label for="recurrence">Recurrence:</label>
+        <select name="recurrence">
+            <option value="None" {% if reminder.recurrence == 'None' %}selected{% endif %}>One-time</option>
+            <option value="Daily" {% if reminder.recurrence == 'Daily' %}selected{% endif %}>Daily</option>
+            <option value="Weekly" {% if reminder.recurrence == 'Weekly' %}selected{% endif %}>Weekly</option>
+            <option value="Monthly" {% if reminder.recurrence == 'Monthly' %}selected{% endif %}>Monthly</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label for="category">Category:</label>
+        <select name="category">
+            <option value="personal" {% if reminder.category == 'personal' %}selected{% endif %}>Personal</option>
+            <option value="academic" {% if reminder.category == 'academic' %}selected{% endif %}>Academic</option>
+            <option value="professional" {% if reminder.category == 'professional' %}selected{% endif %}>Professional</option>
+            <option value="health" {% if reminder.category == 'health' %}selected{% endif %}>Health</option>
+            <option value="finance" {% if reminder.category == 'finance' %}selected{% endif %}>Finance</option>
+        </select>
+         </div>
+        <div class="form-group">
+        <button type="submit">Save Changes</button>
+         </div>
+    </form>
+    <br>
+    <a href="/index"><button class="my-button">Back to HOME</button></a>
+</div>
+</body>
+</html>

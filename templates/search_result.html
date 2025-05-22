@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Search Results - Reminder App
+        </title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Search Results for "{{ q }}" {% if category %} in "{{ category }}" {% endif %}</h2>
+
+            {% if reminders %}
+            <ul>
+                {% for reminder in reminders %}
+                <li>
+                    <strong>{{ reminder.title }}</strong> - {{ reminder.description }}<br>
+                    Date: {{ reminder.date_time }} | Category: {{ reminder.category }}
+                    
+                    <a href="/edit/{{ reminder.id }}" class="edit-btn"><button>Edit</button></a>
+                    <form action="/delete/{{ reminder.id }}" class="delete-btn" method="POST" style="display:inline;">
+                    <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                    </form>
+                    
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No reminders found matching your search.</p>
+            {% endif %}
+
+            <br><br>
+            <a href="/index"><button class="my-button">Back to HOME</button></a>
+        
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReMinderly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .auth-buttons .btn {
+      margin-left: 1rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .login-btn {
+      border: 1px solid #007bff;
+      color: #007bff;
+    }
+
+    .login-btn:hover {
+      background-color: #e6f0ff;
+    }
+
+    .signup-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+    }
+
+    .signup-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Can add hamburger menu here if needed */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" class="logo-icon" alt="icon">ReMinderly</div>
+    
+    <div class="auth-buttons">
+      <a href="/login" class="btn login-btn">Login</a>
+      <a href="/signup" class="btn signup-btn">Sign Up</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Ordinary people spend time. Great people use it.</h1>
+            <p>Make the most out of your day with ReMinderly reminder app for Web. Accessible from any browser, easy to work with and packed with possibilities – it's a cutting edge experience that will help you crush those deadlines.</p><br>
+            <a href="/login" class="btn login-btn"><button class="btn-primary">Get Started - It's Free!</button></a>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='images/reminderhome.png') }}" alt="Add Reminder">
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+      <div class="feature">
+        <h2>Take action, get things done</h2>
+        <p>Add one-time, recurring or category-based reminders in only a few clicks.</p><br>
+        <p>Integrated seamlessly to your web browser,ReMinderly web app will send you live</p><br>
+        <p>notifications so you never miss out on a thing.</p>
+      </div>
+      </section>
+
+  </main>
+</body>
+</html>
