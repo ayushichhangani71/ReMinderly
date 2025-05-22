@@ -1,1 +1,2 @@
-# ReMinderly
+ReMinderly is a full-featured web application built with HTML, CSS, Flask, MySQL, JavaScript, Plyer, and APScheduler. It allows users to create an account, log in, and manage personal reminders with recurring options (daily, weekly, monthly). The app schedules and delivers real-time desktop notifications at the specified date and time using Plyer and APScheduler. The intuitive UI and reliable backend make ReMinderly a practical personal task and reminder management tool.
+
